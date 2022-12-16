@@ -1,0 +1,60 @@
+<html>
+    <head>
+	<meta charset="utf-8">
+        <title>Mmd's web</title>
+	<link href="MyStyle.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript">
+            var email, fname, lname, message;
+            function change(c)
+            {
+                switch(c)
+                {
+                    case "s":
+                    document.getElementById('content').innerHTML='<b> Software Group </b>';
+                    break;
+                    case "h" :
+                    document.getElementById('content').innerHTML='<b> Hardware Group </b>'; 
+                    break;
+                    case "i" :
+                    document.getElementById('content').innerHTML='<b> IT Group </b>';
+                    break;
+
+                }
+            }
+            function trust()
+            {
+                var sure = confirm("مطمئنی؟");
+                if (sure)
+                {
+                alert("نظر شما با موفقیت ثبت شد!");
+                }
+            }
+        </script>
+    </head>
+    <body dir="rtl">
+			
+        <nav>
+            <ul>
+                <li><a href="Home.html">خانه</a></li>
+                <li><a href="About.html">درباره</a></li>
+                <li><a href="Contact.html">تماس با ما</a></li>
+            </ul>
+        </nav>
+        <br/><br/><br/>
+
+        <p class="question">&nbsp;نظرات خود را برای ما ارسال کنید:</p>
+    <form method="post" action="mine.php">
+        <p class="text">&nbsp;ایمیل: <input type="email" id="Email" name="email"></p>
+        <p class="text">&nbsp;نام: <input name="fname" type="text" id="First name"></p>
+        <p class="text">&nbsp;نام خانوادگی: <input name="lname" type="text" id="Last name"></p>
+        <p class="text">&nbsp;پیام: <input name="message" type="text" id="Message"></p>
+        <input type="submit" id="submit" value="ارسال" onclick="trust()" class="text">
+    </form>
+        <div class="footer">
+		<br> </br>
+	    <li style="float: right">Github: <a href="https://github.com/MahoneDF">MahoneDF</a><br/>
+	    <li style="float: left"><p>&nbsp; © Created by Mmd</p></li>
+	    <li><p>&nbsp; Email:&nbsp;h1337408davo@gmail.com</p></li>
+        </div>
+    </body>
+</html>
